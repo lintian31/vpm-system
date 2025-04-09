@@ -78,7 +78,7 @@ Parameter: emailcont (POST)
 sqlmap -r sql.txt --batch --risk 3 --level 5 --dbs
 ```
 
-![image-20250409135424612](/Users/lingtian/Library/Application%20Support/typora-user-images/image-20250409135424612.png)
+![](https://cdn.jsdelivr.net/gh/lintian31/blog-image/blog-image/20250409140515.png)
 
 # Suggested repair
 
